@@ -4,6 +4,32 @@ body, html{
 nav img{
     max-width: 180px;
 }
-.bg-dark{
-    background-color: #282828!important;
+.my-nav-dark{
+    background-color: #282828;
+}
+
+.news-title{
+    border-bottom: 3px solid rgba(101, 101, 101, 0.65)
+}
+
+
+.separator{
+    border-bottom: 2px solid rgba(101, 101, 101, 0.65);
+    margin-top: 10px;
+}
+
+.news-article img{
+    border-radius: 10px;
+}
+
+.image-background{
+    background-size: cover;
+    background-position: center;
+    margin-top: 10px;
+    height: 190px;
+    box-sizing: border-box;
+}
+
+.image-background.center{
+    height: 400px;
 }
