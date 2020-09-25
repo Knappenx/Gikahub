@@ -4,16 +4,19 @@
 {% block body %}
     <div class="container-fluid main-posts mt-2">
         <div class="row d-none d-md-flex d-lg-flex">
-            <div class="col-md-12 col-lg-4 col-xl-3 offset-xl-1 d-flex flex-lg-column justify-content-between">
-                <div class="image-background w-100" style='background-image: url("https://gikahub.com/wp-content/uploads/2020/07/resized-image-Promo-12-1-300x169.jpeg")'></div>
-                <div class="image-background w-100" style='background-image: url("https://gikahub.com/wp-content/uploads/2020/08/PS-PLUS-Banner-1024x576-1-300x169.jpg")'></div>
-            </div>
-            <div class="col-md-12 col-lg-4">
+            <div class="col-md-12 d-lg-none">
                 <div class="image-background center" style='background-image: url("https://gikahub.com/wp-content/uploads/2020/08/Gamescom-main.jpg")'></div>
             </div>
-            <div class="col-md-12 col-lg-4 col-xl-3 d-flex flex-lg-column justify-content-between">
-                <div class="image-background w-100" style='background-image: url("https://gikahub.com/wp-content/uploads/2020/08/Main-300x169.jpg")'></div>
-                <div class="image-background w-100" style='background-image: url("https://gikahub.com/wp-content/uploads/2020/08/resized-image-Promo-17-300x169.jpeg")'></div>
+            <div class="col-md-12 col-lg-3 col-xl-3 offset-xl-1 d-flex flex-lg-column justify-content-between">
+                <div class="image-background w-100 mr-md-2 mr-lg-0" style='background-image: url("https://gikahub.com/wp-content/uploads/2020/07/resized-image-Promo-12-1-300x169.jpeg")'></div>
+                <div class="image-background w-100 ml-md-2 ml-lg-0" style='background-image: url("https://gikahub.com/wp-content/uploads/2020/08/PS-PLUS-Banner-1024x576-1-300x169.jpg")'></div>
+            </div>
+            <div class="d-md-none d-lg-block d-xl-block col-lg-6 col-xl-4">
+                <div class="image-background center" style='background-image: url("https://gikahub.com/wp-content/uploads/2020/08/Gamescom-main.jpg")'></div>
+            </div>
+            <div class="col-md-12 col-lg-3 col-xl-3 d-flex flex-lg-column justify-content-between">
+                <div class="image-background w-100 mr-md-2 mr-lg-0" style='background-image: url("https://gikahub.com/wp-content/uploads/2020/08/Main-300x169.jpg")'></div>
+                <div class="image-background w-100 ml-md-2 ml-lg-0" style='background-image: url("https://gikahub.com/wp-content/uploads/2020/08/resized-image-Promo-17-300x169.jpeg")'></div>
             </div>
         </div>
 
@@ -46,8 +49,81 @@
 
     <div class="container-fluid main-news mt-4">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-lg-12 col-xl-8 offset-xl-2">
                 <h2 class="news-title">Noticias</h2>
+            </div>
+        </div>
+        <div class="row py-2 news-article">
+            <div class="col-lg-12 col-xl-8 offset-xl-2">
+                <div class="row">
+                    <div class="col-md-3 d-flex align-items-center justify-content-center">
+                        <img class="img-fluid" src="https://gikahub.com/wp-content/uploads/2020/08/Main-300x169.jpg" />
+                    </div>
+                    <div class="col-md-9 d-flex flex-column justify-content-between">
+                        <h3>Titulo del Articulo</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate debitis eaque ex harum
+                            reiciendis similique sit sunt. Atque ipsa obcaecati reprehenderit sequi. Adipisci consequuntur
+                            dignissimos fugit id labore rem similique!</p>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0">Nahim - 28 ago 2020</p>
+                            <p class="mb-0">Tag1 | Tag2 | Tag3</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="separator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-2 news-article">
+            <div class="col-md-8 offset-md-2">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="https://gikahub.com/wp-content/uploads/2020/08/Main-300x169.jpg" />
+                    </div>
+                    <div class="col-md-9 d-flex flex-column justify-content-between">
+                        <h3>Titulo del Articulo</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate debitis eaque ex harum
+                            reiciendis similique sit sunt. Atque ipsa obcaecati reprehenderit sequi. Adipisci consequuntur
+                            dignissimos fugit id labore rem similique!</p>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0">Nahim - 28 ago 2020</p>
+                            <p class="mb-0">Tag1 | Tag2 | Tag3</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="separator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-2 news-article">
+            <div class="col-md-8 offset-md-2">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="https://gikahub.com/wp-content/uploads/2020/07/resized-image-Promo-12-1-300x169.jpeg" />
+                    </div>
+                    <div class="col-md-9 d-flex flex-column justify-content-between">
+                        <h3>Titulo del Articulo</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate debitis eaque ex harum
+                            reiciendis similique sit sunt. Atque ipsa obcaecati reprehenderit sequi. Adipisci consequuntur
+                            dignissimos fugit id labore rem similique!</p>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0">Nahim - 28 ago 2020</p>
+                            <p class="mb-0">Tag1 | Tag2 | Tag3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid main-news mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="news-title">Reseñas</h2>
             </div>
         </div>
         <div class="row py-2 news-article">
