@@ -24,7 +24,8 @@ class Migration(migrations.Migration):
                 ('instagram_acc', models.URLField(blank=True, max_length=300, null=True)),
                 ('user_bio', models.TextField(blank=True, max_length=500, null=True)),
                 ('newsletter_sub', models.BooleanField(default=False)),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE,
+                                              to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]
