@@ -4,3 +4,70 @@ body, html{
 nav img{
     max-width: 180px;
 }
+.my-nav-dark{
+    background-color: #282828;
+}
+
+.news-title{
+    border-bottom: 2px solid rgba(101, 101, 101, 0.25);
+    margin:0;
+}
+
+
+.separator{
+    border-bottom: 1px solid rgba(101, 101, 101, 0.35);
+    margin-top: 10px;
+}
+
+.news-article img{
+    border-radius: 10px;
+}
+
+.main-news h1, .main-news h3{
+    font-weight: 300;
+}
+
+.news-article .tags{
+    color: #60B737;
+    font-weight: 300;
+}
+
+.news-article .date{
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.image-background{
+    background-size: cover;
+    background-position: center;
+    margin-top: 10px;
+    height: 190px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.image-background.center{
+    height: 400px;
+}
+
+.overlay-image{
+    background-color: black;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+}
+
+.image-background h3{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: -1px -1px 0 #60B737, 1px -1px 0 #60B737, -1px 1px 0 #60B737, 1px 1px 0 #60B737;
+}
+
+@media (max-width:991px) {
+    .image-background.center{
+        height: 250px;
+    }
+}
