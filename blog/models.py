@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from datetime import date
 
 
 class Category(models.Model):
@@ -34,3 +33,4 @@ class Post(models.Model):
 
     def __str__(self):
         return f'{self.post_title} - {self.post_category}'
+    
