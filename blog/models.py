@@ -30,7 +30,5 @@ class Post(models.Model):
     post_view_counts = models.IntegerField(default=0)
     post_main_header = models.BooleanField(default=False)
 
-
     def __str__(self):
         return f'{self.post_title} - {self.post_category}'
-    
