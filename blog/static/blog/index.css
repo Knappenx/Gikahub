@@ -66,6 +66,22 @@ nav img{
     text-shadow: -1px -1px 0 #60B737, 1px -1px 0 #60B737, -1px 1px 0 #60B737, 1px 1px 0 #60B737;
 }
 
+.footer{
+    padding: 30px 15px;
+}
+
+.footer a:hover{
+    color: #60B737;
+}
+
+.green-color{
+    color: #60B737;
+}
+
+.social-media .fab{
+    margin: 0 10px;
+}
+
 @media (max-width:991px) {
     .image-background.center{
         height: 250px;
