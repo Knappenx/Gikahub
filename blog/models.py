@@ -3,13 +3,6 @@ from django.contrib.auth.models import User
 from datetime import date
 
 
-class Year(models.Model):
-    current_year = date.today().year
-
-    def __str__(self):
-        return self.current_year
-
-
 class Category(models.Model):
     name = models.CharField(max_length=20, blank=True, null=True)
 
