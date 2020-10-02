@@ -1,5 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import date
+
+
+class Year(models.Model):
+    current_year = date.today().year
+
+    def __str__(self):
+        return self.current_year
 
 
 class Category(models.Model):
@@ -29,6 +37,7 @@ class Post(models.Model):
     post_is_draft = models.BooleanField(default=True)
     post_view_counts = models.IntegerField(default=0)
     post_main_header = models.BooleanField(default=False)
+
 
     def __str__(self):
         return f'{self.post_title} - {self.post_category}'

@@ -66,6 +66,44 @@ nav img{
     text-shadow: -1px -1px 0 #60B737, 1px -1px 0 #60B737, -1px 1px 0 #60B737, 1px 1px 0 #60B737;
 }
 
+.footer{
+    height: 150px;
+    margin-top: 10px;
+    padding: 35px 0;
+}
+
+.footer_menu_items{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer_menu a{
+    color: #60B737;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p{
+    color: #60B737;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media .fab{
+    margin: 10px;
+    color: #60B737;
+
+}
+
 @media (max-width:991px) {
     .image-background.center{
         height: 250px;
