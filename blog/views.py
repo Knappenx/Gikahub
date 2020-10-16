@@ -9,7 +9,6 @@ def index(request):
     main_post = main_posts[0]
     secondary_posts = main_posts[1:3]
     third_posts = main_posts[3:5]
-    <!-- categories = {} -->
     post_context = {
         'main_posts': main_posts,
         'main_post': main_post,
