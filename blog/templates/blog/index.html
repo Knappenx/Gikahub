@@ -50,148 +50,48 @@
             </div>
         </div>
     </div>
+    {% for category,posts in categories.items %}
 
-    <div class="container-fluid main-news mt-4">
-        <div class="row">
-            <div class="col-lg-12 col-xl-10 offset-xl-1">
-                <h1 class="news-title">Noticias</h1>
+        <div class="container-fluid main-news mt-4">
+            <div class="row">
+                <div class="col-lg-12 col-xl-10 offset-xl-1">
+                    <h1 class="news-title">{{ category.name }}</h1>
+                </div>
             </div>
-        </div>
-        <div class="row py-2 news-article">
-            <div class="col-lg-12 col-xl-10 offset-xl-1">
-                <div class="row">
-                    <div class="col-md-3 d-flex align-items-center justify-content-center my-2">
-                        <img class="img-fluid" src="{{ image }}" />
-                    </div>
-                    <div class="col-md-9 d-flex flex-column justify-content-between">
-                        <h3 class="text-center text-md-left">{{ title }}</h3>
-                        <p class="text-center text-md-left">{{ abstract }}</p>
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-0 date">{{ author }} - {{ pub_date }}</p>
-                            <p class="mb-0 tags">Tag1 | Tag2 | Tag3</p>
+            <div class="row py-2 news-article">
+                <div class="col-lg-12 col-xl-10 offset-xl-1">
+                   {% for post in posts|slice:"0:2" %}
+                        <div class="row">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center my-2">
+                                <img class="img-fluid" src="{{ post.post_main_image }}" />
+                            </div>
+                            <div class="col-md-9 d-flex flex-column justify-content-between my-2">
+                                <h3 class="text-center text-md-left">{{ post.post_title }}</h3>
+                                <p class="text-center text-md-left">{{ post.post_abstract }}</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img class="profile_pic rounded-circle" src="{{ post.author.userprofile.profile_pic }}" />
+                                        <p class="mb-0 date">{{ post.author }} - {{ post.published_date }}</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 tags">{{ post.post_tags.all|join:" | " }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if not forloop.last %}
+                                <div class="col-md-12">
+                                    <div class="separator"></div>
+                                </div>
+                            {% endif %}
+
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="separator"></div>
+                    {% endfor %}
+                    <div class="d-flex justify-content-center mt-4">
+                        <a href="{% url "blog:category_list" category.id %}"><button type="button" class="btn btn-success button-green-color">Ver más</button></a>
                     </div>
                 </div>
             </div>
         </div>
+    {% endfor %}
 
-        <div class="row py-2 news-article">
-            <div class="col-lg-12 col-xl-10 offset-xl-1">
-                <div class="row">
-                    <div class="col-md-3 d-flex align-items-center justify-content-center my-2">
-                        <img class="img-fluid" src="https://gikahub.com/wp-content/uploads/2020/08/PS-PLUS-Banner-1024x576-1-300x169.jpg" />
-                    </div>
-                    <div class="col-md-9 d-flex flex-column justify-content-between">
-                        <h3 class="text-center text-md-left">Titulo del Articulo</h3>
-                        <p class="text-center text-md-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate debitis eaque ex harum
-                            reiciendis similique sit sunt. Atque ipsa obcaecati reprehenderit sequi. Adipisci consequuntur
-                            dignissimos fugit id labore rem similique!</p>
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-0 date">Nahim - 28 ago 2020</p>
-                            <p class="mb-0 tags">Tag1 | Tag2 | Tag3</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="separator"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row py-2 news-article">
-            <div class="col-lg-12 col-xl-10 offset-xl-1">
-                <div class="row">
-                    <div class="col-md-3 d-flex align-items-center justify-content-center my-2">
-                        <img class="img-fluid" src="https://gikahub.com/wp-content/uploads/2020/07/resized-image-Promo-12-1-300x169.jpeg" />
-                    </div>
-                    <div class="col-md-9 d-flex flex-column justify-content-between">
-                        <h3 class="text-center text-md-left">Titulo del Articulo</h3>
-                        <p class="text-center text-md-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate debitis eaque ex harum
-                            reiciendis similique sit sunt. Atque ipsa obcaecati reprehenderit sequi. Adipisci consequuntur
-                            dignissimos fugit id labore rem similique!</p>
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-0 date">Nahim - 28 ago 2020</p>
-                            <p class="mb-0 tags">Tag1 | Tag2 | Tag3</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid main-news mt-4">
-        <div class="row">
-            <div class="col-lg-12 col-xl-10 offset-xl-1">
-                <h1 class="news-title">Reseñas</h1>
-            </div>
-        </div>
-        <div class="row py-2 news-article">
-            <div class="col-lg-12 col-xl-10 offset-xl-1">
-                <div class="row">
-                    <div class="col-md-3 d-flex align-items-center justify-content-center my-2">
-                        <img class="img-fluid" src="https://gikahub.com/wp-content/uploads/2020/08/resized-image-Promo-17-300x169.jpeg" />
-                    </div>
-                    <div class="col-md-9 d-flex flex-column justify-content-between">
-                        <h3 class="text-center text-md-left">Titulo del Articulo</h3>
-                        <p class="text-center text-md-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate debitis eaque ex harum
-                            reiciendis similique sit sunt. Atque ipsa obcaecati reprehenderit sequi. Adipisci consequuntur
-                            dignissimos fugit id labore rem similique!</p>
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-0 date">Nahim - 28 ago 2020</p>
-                            <p class="mb-0 tags">Tag1 | Tag2 | Tag3</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="separator"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row py-2 news-article">
-            <div class="col-lg-12 col-xl-10 offset-xl-1">
-                <div class="row">
-                    <div class="col-md-3 d-flex align-items-center justify-content-center my-2">
-                        <img class="img-fluid" src="https://gikahub.com/wp-content/uploads/2020/08/Main-300x169.jpg" />
-                    </div>
-                    <div class="col-md-9 d-flex flex-column justify-content-between">
-                        <h3 class="text-center text-md-left">Titulo del Articulo</h3>
-                        <p class="text-center text-md-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate debitis eaque ex harum
-                            reiciendis similique sit sunt. Atque ipsa obcaecati reprehenderit sequi. Adipisci consequuntur
-                            dignissimos fugit id labore rem similique!</p>
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-0 date">Nahim - 28 ago 2020</p>
-                            <p class="mb-0 tags">Tag1 | Tag2 | Tag3</p>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="separator"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row py-2 news-article">
-            <div class="col-lg-12 col-xl-10 offset-xl-1">
-                <div class="row">
-                    <div class="col-md-3 d-flex align-items-center justify-content-center my-2">
-                        <img class="img-fluid" src="https://gikahub.com/wp-content/uploads/2020/07/resized-image-Promo-12-1-300x169.jpeg" />
-                    </div>
-                    <div class="col-md-9 d-flex flex-column justify-content-between">
-                        <h3 class="text-center text-md-left">Titulo del Articulo</h3>
-                        <p class="text-center text-md-left"`>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate debitis eaque ex harum
-                            reiciendis similique sit sunt. Atque ipsa obcaecati reprehenderit sequi. Adipisci consequuntur
-                            dignissimos fugit id labore rem similique!</p>
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-0 date">Nahim - 28 ago 2020</p>
-                            <p class="mb-0 tags">Tag1 | Tag2 | Tag3</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 {% endblock %}

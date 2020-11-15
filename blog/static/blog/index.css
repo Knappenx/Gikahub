@@ -19,6 +19,11 @@ nav img{
     margin-top: 10px;
 }
 
+.post-divider{
+    border-top: 2px solid rgba(101, 101, 101, 0.65);
+    margin-bottom: 10px;
+}
+
 .news-article img{
     border-radius: 10px;
 }
@@ -78,8 +83,18 @@ nav img{
     color: #60B737;
 }
 
+.button-green-color{
+    background-color: #60B737;
+}
+
 .social-media .fab{
     margin: 0 10px;
+}
+
+.profile_pic{
+    max-height: 50px;
+    max-width: 50px;
+    margin-right: 8px;
 }
 
 @media (max-width:991px) {
