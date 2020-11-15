@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
 from blog.models import Post, Category
-from rbac.models import UserProfile
 
 
 def index(request):
