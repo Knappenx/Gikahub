@@ -1,0 +1,42 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block body %}
+    <div class="container-fluid main-news mt-4">
+        <div class="row">
+            <div class="col-lg-12 col-xl-10 offset-xl-1">
+                <h1 class="news-title">{{ category.name }}</h1>
+            </div>
+        </div>
+        <div class="row py-2 news-article">
+            <div class="col-lg-12 col-xl-10 offset-xl-1">
+               {% for post in posts %}
+                    <div class="row">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center my-2">
+                            <img class="img-fluid" src="{{ post.post_main_image }}" />
+                        </div>
+                        <div class="col-md-9 d-flex flex-column justify-content-between my-2">
+                            <h3 class="text-center text-md-left">{{ post.post_title }}</h3>
+                            <p class="text-center text-md-left">{{ post.post_abstract }}</p>
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <img class="profile_pic rounded-circle" src="{{ post.author.userprofile.profile_pic }}" />
+                                    <p class="mb-0 date">{{ post.author }} - {{ post.published_date }}</p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="mb-0 tags">{{ post.post_tags.all|join:" | " }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% if not forloop.last %}
+                            <div class="col-md-12">
+                                <div class="separator"></div>
+                            </div>
+                        {% endif %}
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

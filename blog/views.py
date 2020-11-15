@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
-from blog.models import Post
+from blog.models import Post, Category
+from rbac.models import UserProfile
 
 
 def index(request):
@@ -26,5 +27,16 @@ def index(request):
 
 
 def template(request):
-    context = {}
+    context = {'categories': Category.objects.all()}
     return render(request, 'blog/post_template.html', context)
+
+
+def category_list(request, category_id):
+    category = Category.objects.get(id=category_id)
+    category_posts = Post.objects.filter(post_category=category)
+    context = {
+        'posts': category_posts,
+        'category': category,
+        'categories': Category.objects.all()
+    }
+    return render(request, 'blog/category_list.html', context)

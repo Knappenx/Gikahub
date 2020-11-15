@@ -70,7 +70,7 @@
                                 <p class="text-center text-md-left">{{ post.post_abstract }}</p>
                                 <div class="d-flex justify-content-between">
                                     <div class="d-flex align-items-center">
-                                        <img class="profile_pic" src="https://scontent.fqro1-1.fna.fbcdn.net/v/t1.0-9/21369409_1610970272274455_1152764708253662641_n.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=aA9eHniKJPgAX9vW5nP&_nc_ht=scontent.fqro1-1.fna&oh=0d9e6b3501b4fbe2fa629654824d5b6e&oe=5FD3FCCB" />
+                                        <img class="profile_pic rounded-circle" src="{{ post.author.userprofile.profile_pic }}" />
                                         <p class="mb-0 date">{{ post.author }} - {{ post.published_date }}</p>
                                     </div>
                                     <div class="d-flex align-items-center">
@@ -83,8 +83,12 @@
                                     <div class="separator"></div>
                                 </div>
                             {% endif %}
+
                         </div>
                     {% endfor %}
+                    <div class="d-flex justify-content-center mt-4">
+                        <a href="{% url "blog:category_list" category.id %}"><button type="button" class="btn btn-success button-green-color">Ver más</button></a>
+                    </div>
                 </div>
             </div>
         </div>
