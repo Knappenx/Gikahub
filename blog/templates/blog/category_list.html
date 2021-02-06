@@ -12,10 +12,10 @@
                {% for post in posts %}
                     <div class="row">
                         <div class="col-md-3 d-flex align-items-center justify-content-center my-2">
-                            <img class="img-fluid" src="{{ post.post_main_image }}" />
+                            <a href="{% url 'blog:post_template' post.id post.post_slug %}"><img class="img-fluid" src="{{ post.post_main_image }}" /></a>
                         </div>
                         <div class="col-md-9 d-flex flex-column justify-content-between my-2">
-                            <h3 class="text-center text-md-left">{{ post.post_title }}</h3>
+                            <a href="{% url 'blog:post_template' post.id post.post_slug %}"><h3 class="text-center text-md-left">{{ post.post_title }}</h3></a>
                             <p class="text-center text-md-left">{{ post.post_abstract }}</p>
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex align-items-center">

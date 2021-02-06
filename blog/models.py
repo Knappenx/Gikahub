@@ -29,6 +29,10 @@ class Post(models.Model):
     post_is_draft = models.BooleanField(default=True)
     post_view_counts = models.IntegerField(default=0)
     post_main_header = models.BooleanField(default=False)
+    in_post_video = models.URLField()
+    in_post_image = models.URLField()
+    in_post_text = models.TextField(max_length=5000, blank=True, null=True)
+    in_post_subtitle = models.CharField(max_length=500, blank=True, null=True)
 
     def __str__(self):
         return f'{self.post_title} - {self.post_category}'

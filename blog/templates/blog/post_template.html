@@ -5,20 +5,20 @@
     <div class="container-fluid post-title">
         <div class="row">
             <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-4">
-                <h1>Fall Guys segunda temporada</h1>
+                <h1>{{ post.post_title }}</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-2">
-                <h2>El juego sensación del verano tendrá cosas nuevas.</h2>
+                <h2>{{ post.in_post_subtitle }}</h2>
             </div>
             <div class="offset-md-1 offset-lg-0 col-12 col-lg-2">
                 <div class="row">
                     <div class="text-lg-right col-6 col-md-5 col-lg-12">
-                        <p class="mb-0">Por: Nahim</p>
+                        <p class="mb-0">Por: {{ post.author }}</p>
                     </div>
                     <div class="text-right col-6 col-md-5 col-lg-12">
-                        <p class="">Publicado: 28 AGO 2020</p>
+                        <p class="">Publicado: {{ post.created_at }}</p>
                     </div>
                 </div>
             </div>
@@ -28,27 +28,25 @@
         </div>
         <div class="row">
             <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-                <p>Hoy pudimos tener un pequeño vistazo de lo que ofrecerá Fall Guys segunda temporada en el Gamescom 2020. Este juego se ha convertido en un éxito en PC y PS4, estando de regalo para los miembros de PS Plus en el mes de agosto. Millones de usuarios se han unido ha este divertido juego que es bastante fácil de jugar, pero puede ser muy complicado conseguir una victoria. Si bien acaba de salir el juego, yo creo que muchas personas pensamos que le hacen falta más mini juegos. Esta segunda temporada tendrá una temática medieval, la cual se ve reflejada en los escenarios y trajes nuevos.</p>
-                <h3>Nuevos escenarios</h3>
-                <p>En este pequeño vistazo que dieron mostraron cinco nuevos escenarios. Esto es algo que necesitará el juego para mantenerse relevante entre los que lo juegan, ya que puede llegar a ser muy repetitivo. A continuación les dejo los diseños que mostraron:</p>
+                <p>{{ post.in_post_text }}</p>
                 <div class="row container-fluid">
                     <div class="col-md-6 ml-0 pl-0">
-                        <p>Hoy pudimos tener un pequeño vistazo de lo que ofrecerá Fall Guys segunda temporada en el Gamescom 2020. Este juego se ha convertido en un éxito en PC y PS4, estando de regalo para los miembros de PS Plus en el mes de agosto. Millones de usuarios se han unido ha este divertido juego que es bastante fácil de jugar, pero puede ser muy complicado conseguir una victoria. Si bien acaba de salir el juego, yo creo que muchas personas pensamos que le hacen falta más mini juegos. Esta segunda temporada tendrá una temática medieval, la cual se ve reflejada en los escenarios y trajes nuevos.</p>
+                        <p>{{ post.in_post_text }}</p>
                     </div>
                     <div class="col-md-6 d-flex justify-content-center">
-                        <iframe src="https://www.youtube.com/embed/Wj3dUvGLjNQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="{{ post.in_post_video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="row container-fluid mx-0">
                     <div class="col-md-6 ml-0 pl-0">
-                        <p>Hoy pudimos tener un pequeño vistazo de lo que ofrecerá Fall Guys segunda temporada en el Gamescom 2020. Este juego se ha convertido en un éxito en PC y PS4, estando de regalo para los miembros de PS Plus en el mes de agosto. Millones de usuarios se han unido ha este divertido juego que es bastante fácil de jugar, pero puede ser muy complicado conseguir una victoria. Si bien acaba de salir el juego, yo creo que muchas personas pensamos que le hacen falta más mini juegos. Esta segunda temporada tendrá una temática medieval, la cual se ve reflejada en los escenarios y trajes nuevos.</p>
+                        <p>{{ post.in_post_text }}</p>
                     </div>
                     <div class="d-flex align-items-center col-md-6">
-                        <img class="img-fluid" src="https://gikahub.com/wp-content/uploads/2020/08/LVL1.jpg">
+                        <img class="img-fluid" src="{{ post.in_post_image }}">
                     </div>
                 </div>
                 <div class="d-flex justify-content-center mt-4">
-                    <iframe class="" width="560" height="315" src="https://www.youtube.com/embed/Wj3dUvGLjNQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="" width="560" height="315" src="{{ post.in_post_video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

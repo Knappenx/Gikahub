@@ -25,8 +25,11 @@ def index(request):
     return render(request, 'blog/index.html', post_context)
 
 
-def template(request):
-    context = {'categories': Category.objects.all()}
+def template(request, id, post_slug):
+    post = Post.objects.get(id=id)
+    context = {
+        'post': post
+    }
     return render(request, 'blog/post_template.html', context)
 
 
